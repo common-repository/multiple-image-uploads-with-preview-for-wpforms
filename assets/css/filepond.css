@@ -1,0 +1,1193 @@
+/*!
+ * FilePond 4.26.1
+ * Licensed under MIT, https://opensource.org/licenses/MIT/
+ * Please visit https://pqina.nl/filepond/ for details.
+ */
+
+/* eslint-disable */
+.filepond--assistant {
+    position: absolute !important;
+    overflow: hidden !important;
+    height: 1px !important;
+    width: 1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+}
+
+/* Hard to override styles */
+.filepond--browser.filepond--browser {
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    left: 1em !important;
+    top: 1.75em !important;
+    width: calc(100% - 2em) !important;
+    opacity: 0 !important;
+    font-size: 0 !important;
+}
+
+.filepond--data {
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    contain: strict !important;
+}
+
+.filepond--drip {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    overflow: hidden !important;
+    opacity: 0.1 !important;
+    pointer-events: none !important;
+    border-radius: 0.5em !important;
+    background: rgba(0, 0, 0, 0.01) !important;
+}
+
+.filepond--drip-blob {
+    position: absolute !important;
+    -webkit-transform-origin: center center !important;
+    transform-origin: center center !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 8em !important;
+    height: 8em !important;
+    margin-left: -4em !important;
+    margin-top: -4em !important;
+    background: #292625 !important;
+    border-radius: 50% !important;
+    will-change: transform, opacity !important;
+}
+
+.filepond--drop-label {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    color: #4f4f4f !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 0px !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    will-change: transform, opacity !important;
+}
+
+/* Hard to override styles on purpose */
+.filepond--drop-label.filepond--drop-label label {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0.5em !important;
+}
+
+.filepond--drop-label label {
+    cursor: default !important;
+    font-size: 0.875em !important;
+    font-weight: normal !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+}
+
+.filepond--label-action {
+    text-decoration: underline !important;
+    -webkit-text-decoration-skip: ink !important;
+    text-decoration-skip-ink: auto !important;
+    -webkit-text-decoration-color: #a7a4a4 !important;
+    text-decoration-color: #a7a4a4 !important;
+    cursor: pointer !important;
+}
+
+.filepond--root[data-disabled] .filepond--drop-label label {
+    opacity: 0.5 !important;
+}
+
+/* Hard to override styles */
+.filepond--file-action-button.filepond--file-action-button {
+    font-size: 1em !important;
+    width: 1.625em !important;
+    height: 1.625em !important;
+    font-family: inherit !important;
+    line-height: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    outline: none !important;
+    will-change: transform, opacity !important;
+}
+.filepond--file-action-button.filepond--file-action-button span {
+    position: absolute !important;
+    overflow: hidden !important;
+    height: 1px !important;
+    width: 1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+}
+.filepond--file-action-button.filepond--file-action-button svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+.filepond--file-action-button.filepond--file-action-button::after {
+    position: absolute !important;
+    left: -0.75em !important;
+    right: -0.75em !important;
+    top: -0.75em !important;
+    bottom: -0.75em !important;
+    content: '' !important;
+}
+
+/* Soft styles */
+.filepond--file-action-button {
+    cursor: auto !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-image: none !important;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0) !important;
+    transition: box-shadow 0.25s ease-in !important;
+}
+.filepond--file-action-button:hover,
+.filepond--file-action-button:focus {
+    box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.9) !important;
+}
+.filepond--file-action-button[disabled] {
+    color: rgba(255, 255, 255, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+}
+.filepond--file-action-button[hidden] {
+    display: none !important;
+}
+
+/* edit button */
+.filepond--action-edit-item.filepond--action-edit-item {
+    width: 2em !important;
+    height: 2em !important;
+    padding: 0.1875em !important;
+}
+.filepond--action-edit-item.filepond--action-edit-item[data-align*='center'] {
+    margin-left: -0.1875em !important;
+}
+.filepond--action-edit-item.filepond--action-edit-item[data-align*='bottom'] {
+    margin-bottom: -0.1875em !important;
+}
+
+.filepond--action-edit-item-alt {
+    border: none !important;
+    line-height: inherit !important;
+    background: transparent !important;
+    font-family: inherit !important;
+    color: inherit !important;
+    outline: none !important;
+    padding: 0 !important;
+    margin: 0 0 0 0.25em !important;
+    pointer-events: all !important;
+    position: absolute !important;
+}
+.filepond--action-edit-item-alt svg {
+    width: 1.3125em !important;
+    height: 1.3125em !important;
+}
+.filepond--action-edit-item-alt span {
+    font-size: 0 !important;
+    opacity: 0 !important;
+}
+
+.filepond--file-info {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    flex: 1 !important;
+    margin: 0 0.5em 0 0 !important;
+    min-width: 0 !important;
+    will-change: transform, opacity !important;
+    pointer-events: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+.filepond--file-info * {
+    margin: 0 !important;
+}
+.filepond--file-info .filepond--file-info-main {
+    font-size: 0.75em !important;
+    line-height: 1.2 !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+}
+.filepond--file-info .filepond--file-info-sub {
+    font-size: 0.625em !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.25s ease-in-out !important;
+    white-space: nowrap !important;
+}
+.filepond--file-info .filepond--file-info-sub:empty {
+    display: none !important;
+}
+
+.filepond--file-status {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    min-width: 2.25em !important;
+    text-align: right !important;
+    will-change: transform, opacity !important;
+    pointer-events: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+.filepond--file-status * {
+    margin: 0 !important;
+    white-space: nowrap !important;
+}
+.filepond--file-status .filepond--file-status-main {
+    font-size: 0.75em !important;
+    line-height: 1.2 !important;
+}
+.filepond--file-status .filepond--file-status-sub {
+    font-size: 0.625em !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.25s ease-in-out !important;
+}
+
+/* Hard to override styles */
+.filepond--file-wrapper.filepond--file-wrapper {
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    height: 100% !important;
+}
+.filepond--file-wrapper.filepond--file-wrapper > legend {
+    position: absolute !important;
+    overflow: hidden !important;
+    height: 1px !important;
+    width: 1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+}
+
+.filepond--file {
+    position: static !important;
+    display: flex !important;
+    height: 100% !important;
+    align-items: flex-start !important;
+    padding: 0.5625em 0.5625em !important;
+    color: #fff !important;
+    border-radius: 0.5em !important;
+}
+.filepond--file .filepond--file-status {
+    margin-left: auto !important;
+    margin-right: 2.25em !important;
+}
+.filepond--file .filepond--processing-complete-indicator {
+    pointer-events: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    z-index: 3 !important;
+}
+.filepond--file .filepond--processing-complete-indicator,
+.filepond--file .filepond--progress-indicator,
+.filepond--file .filepond--file-action-button {
+    position: absolute !important;
+}
+.filepond--file [data-align*='left'] {
+    left: 0.5625em !important;
+}
+.filepond--file [data-align*='right'] {
+    right: 0.5625em !important;
+}
+.filepond--file [data-align*='center'] {
+    left: calc(50% - 0.8125em) !important;
+}
+.filepond--file [data-align*='bottom'] {
+    bottom: 1.125em !important;
+}
+.filepond--file [data-align='center'] {
+    top: calc(50% - 0.8125em) !important;
+}
+.filepond--file .filepond--progress-indicator {
+    margin-top: 0.1875em !important;
+}
+.filepond--file .filepond--progress-indicator[data-align*='right'] {
+    margin-right: 0.1875em !important;
+}
+.filepond--file .filepond--progress-indicator[data-align*='left'] {
+    margin-left: 0.1875em !important;
+}
+
+[data-filepond-item-state='cancelled'] .filepond--file-info,
+[data-filepond-item-state*='invalid'] .filepond--file-info,
+[data-filepond-item-state*='error'] .filepond--file-info {
+    margin-right: 2.25em !important;
+}
+
+[data-filepond-item-state~='processing'] .filepond--file-status-sub {
+    opacity: 0 !important;
+}
+
+[data-filepond-item-state~='processing']
+    .filepond--action-abort-item-processing
+    ~ .filepond--file-status
+    .filepond--file-status-sub {
+    opacity: 0.5 !important;
+}
+
+[data-filepond-item-state='processing-error'] .filepond--file-status-sub {
+    opacity: 0 !important;
+}
+
+[data-filepond-item-state='processing-error']
+    .filepond--action-retry-item-processing
+    ~ .filepond--file-status
+    .filepond--file-status-sub {
+    opacity: 0.5 !important;
+}
+
+[data-filepond-item-state='processing-complete'] .filepond--action-revert-item-processing svg {
+    -webkit-animation: fall 0.5s 0.125s linear both !important;
+    animation: fall 0.5s 0.125s linear both !important;
+}
+
+[data-filepond-item-state='processing-complete'] .filepond--file-status-sub {
+    opacity: 0.5 !important;
+}
+
+[data-filepond-item-state='processing-complete']
+    .filepond--processing-complete-indicator:not([style*='hidden'])
+    ~ .filepond--file-status
+    .filepond--file-status-sub {
+    opacity: 0 !important;
+}
+
+[data-filepond-item-state='processing-complete'] .filepond--file-info-sub {
+    opacity: 0 !important;
+}
+
+[data-filepond-item-state='processing-complete']
+    .filepond--action-revert-item-processing
+    ~ .filepond--file-info
+    .filepond--file-info-sub {
+    opacity: 0.5 !important;
+}
+
+[data-filepond-item-state*='invalid'] .filepond--panel,
+[data-filepond-item-state*='invalid'] .filepond--file-wrapper,
+[data-filepond-item-state*='error'] .filepond--panel,
+[data-filepond-item-state*='error'] .filepond--file-wrapper {
+    -webkit-animation: shake 0.65s linear both !important;
+    animation: shake 0.65s linear both !important;
+}
+
+[data-filepond-item-state*='busy'] .filepond--progress-indicator svg {
+    -webkit-animation: spin 1s linear infinite !important;
+    animation: spin 1s linear infinite !important;
+}
+
+/**
+ * States
+ */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotateZ(0deg) !important;
+        transform: rotateZ(0deg) !important;
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg) !important;
+        transform: rotateZ(360deg) !important;
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotateZ(0deg) !important;
+        transform: rotateZ(0deg) !important;
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg) !important;
+        transform: rotateZ(360deg) !important;
+    }
+}
+
+@-webkit-keyframes shake {
+    10%,
+    90% {
+        -webkit-transform: translateX(-0.0625em) !important;
+        transform: translateX(-0.0625em) !important;
+    }
+    20%,
+    80% {
+        -webkit-transform: translateX(0.125em) !important;
+        transform: translateX(0.125em) !important;
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateX(-0.25em) !important;
+        transform: translateX(-0.25em) !important;
+    }
+    40%,
+    60% {
+        -webkit-transform: translateX(0.25em) !important;
+        transform: translateX(0.25em) !important;
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        -webkit-transform: translateX(-0.0625em) !important;
+        transform: translateX(-0.0625em) !important;
+    }
+    20%,
+    80% {
+        -webkit-transform: translateX(0.125em) !important;
+        transform: translateX(0.125em) !important;
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateX(-0.25em) !important;
+        transform: translateX(-0.25em) !important;
+    }
+    40%,
+    60% {
+        -webkit-transform: translateX(0.25em) !important;
+        transform: translateX(0.25em) !important;
+    }
+}
+
+@-webkit-keyframes fall {
+    0% {
+        opacity: 0 !important;
+        -webkit-transform: scale(0.5) !important;
+        transform: scale(0.5) !important;
+        -webkit-animation-timing-function: ease-out !important;
+        animation-timing-function: ease-out !important;
+    }
+    70% {
+        opacity: 1 !important;
+        -webkit-transform: scale(1.1) !important;
+        transform: scale(1.1) !important;
+        -webkit-animation-timing-function: ease-in-out !important;
+        animation-timing-function: ease-in-out !important;
+    }
+    100% {
+        -webkit-transform: scale(1) !important;
+        transform: scale(1) !important;
+        -webkit-animation-timing-function: ease-out !important;
+        animation-timing-function: ease-out !important;
+    }
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0 !important;
+        -webkit-transform: scale(0.5) !important;
+        transform: scale(0.5) !important;
+        -webkit-animation-timing-function: ease-out !important;
+        animation-timing-function: ease-out !important;
+    }
+    70% {
+        opacity: 1 !important;
+        -webkit-transform: scale(1.1) !important;
+        transform: scale(1.1) !important;
+        -webkit-animation-timing-function: ease-in-out !important;
+        animation-timing-function: ease-in-out !important;
+    }
+    100% {
+        -webkit-transform: scale(1) !important;
+        transform: scale(1) !important;
+        -webkit-animation-timing-function: ease-out !important;
+        animation-timing-function: ease-out !important;
+    }
+}
+
+.filepond--hopper[data-hopper-state='drag-over'] > * {
+    pointer-events: none !important;
+}
+
+.filepond--hopper[data-hopper-state='drag-over']::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 100 !important;
+}
+
+.filepond--progress-indicator {
+    z-index: 103 !important;
+}
+
+.filepond--file-action-button {
+    z-index: 102 !important;
+}
+
+.filepond--file-status {
+    z-index: 101 !important;
+}
+
+.filepond--file-info {
+    z-index: 100 !important;
+}
+
+.filepond--item {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1 !important;
+    padding: 0 !important;
+    margin: 0.25em !important;
+    will-change: transform, opacity !important;
+}
+.filepond--item > .filepond--panel {
+    z-index: -1 !important;
+}
+.filepond--item > .filepond--panel .filepond--panel-bottom {
+    box-shadow: 0 0.0625em 0.125em -0.0625em rgba(0, 0, 0, 0.25) !important;
+}
+.filepond--item > .filepond--file-wrapper,
+.filepond--item > .filepond--panel {
+    transition: opacity 0.15s ease-out !important;
+}
+.filepond--item[data-drag-state] {
+    cursor: -webkit-grab !important;
+    cursor: grab !important;
+}
+.filepond--item[data-drag-state] > .filepond--panel {
+    transition: box-shadow 0.125s ease-in-out !important;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+.filepond--item[data-drag-state='drag'] {
+    cursor: -webkit-grabbing !important;
+    cursor: grabbing !important;
+}
+.filepond--item[data-drag-state='drag'] > .filepond--panel {
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.325) !important;
+}
+.filepond--item[data-drag-state]:not([data-drag-state='idle']) {
+    z-index: 2 !important;
+}
+
+.filepond--item-panel {
+    background-color: #64605e !important;
+}
+
+[data-filepond-item-state='processing-complete'] .filepond--item-panel {
+    background-color: #369763 !important;
+}
+
+[data-filepond-item-state*='invalid'] .filepond--item-panel,
+[data-filepond-item-state*='error'] .filepond--item-panel {
+    background-color: #c44e47 !important;
+}
+
+.filepond--item-panel {
+    border-radius: 0.5em !important;
+    transition: background-color 0.25s !important;
+}
+
+.filepond--list-scroller {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    will-change: transform !important;
+}
+
+.filepond--list-scroller[data-state='overflow'] {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    -webkit-mask: linear-gradient(to bottom, #000 calc(100% - 0.5em), transparent 100%) !important;
+    mask: linear-gradient(to bottom, #000 calc(100% - 0.5em), transparent 100%) !important;
+}
+.filepond--list-scroller[data-state='overflow'] .filepond--list {
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
+.filepond--list-scroller::-webkit-scrollbar {
+    background: transparent !important;
+}
+
+.filepond--list-scroller::-webkit-scrollbar:vertical {
+    width: 1em !important;
+}
+
+.filepond--list-scroller::-webkit-scrollbar:horizontal {
+    height: 0 !important;
+}
+
+.filepond--list-scroller::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 99999px !important;
+    border: 0.3125em solid transparent !important;
+    background-clip: content-box !important;
+}
+
+/* hard to overide styles on purpose */
+.filepond--list.filepond--list {
+    position: absolute !important;
+    top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style-type: none !important;
+    will-change: transform !important;
+}
+
+/* used for padding so allowed to be restyled */
+.filepond--list {
+    left: 0.75em !important;
+    right: 0.75em !important;
+}
+
+.filepond--root[data-style-panel-layout~='integrated'] {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+.filepond--root[data-style-panel-layout~='circle'] .filepond--panel-root,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--panel-root {
+    border-radius: 0 !important;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--panel-root > *,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--panel-root > * {
+    display: none !important;
+}
+
+.filepond--root[data-style-panel-layout~='circle'] .filepond--drop-label,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--drop-label {
+    bottom: 0 !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 7 !important;
+}
+
+.filepond--root[data-style-panel-layout~='circle'] .filepond--item-panel,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--item-panel {
+    display: none !important;
+}
+
+.filepond--root[data-style-panel-layout~='compact'] .filepond--list-scroller,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--list-scroller {
+    overflow: hidden !important;
+    height: 100% !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.filepond--root[data-style-panel-layout~='compact'] .filepond--list,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--list {
+    left: 0 !important;
+    right: 0 !important;
+    height: 100% !important;
+}
+
+.filepond--root[data-style-panel-layout~='compact'] .filepond--item,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--item {
+    margin: 0 !important;
+}
+
+.filepond--root[data-style-panel-layout~='compact'] .filepond--file-wrapper,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--file-wrapper {
+    height: 100% !important;
+}
+
+.filepond--root[data-style-panel-layout~='compact'] .filepond--drop-label,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--drop-label {
+    z-index: 7 !important;
+}
+
+.filepond--root[data-style-panel-layout~='circle'] {
+    border-radius: 99999rem !important;
+    overflow: hidden !important;
+}
+.filepond--root[data-style-panel-layout~='circle'] > .filepond--panel {
+    border-radius: inherit !important;
+}
+.filepond--root[data-style-panel-layout~='circle'] > .filepond--panel > * {
+    display: none !important;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--file-info {
+    display: none !important;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--file-status {
+    display: none !important;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--action-edit-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+        .filepond--root[data-style-panel-layout~='circle'] {
+            will-change: transform !important;
+        }
+    }
+}
+
+.filepond--panel-root {
+    border-radius: 0.5em !important;
+    background-color: #f1f0ef !important;
+}
+
+.filepond--panel {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    height: 100% !important;
+    pointer-events: none !important;
+}
+
+.filepond-panel:not([data-scalable='false']) {
+    height: auto !important;
+}
+
+.filepond--panel[data-scalable='false'] > div {
+    display: none !important;
+}
+
+.filepond--panel[data-scalable='true'] {
+    -webkit-transform-style: preserve-3d !important;
+    transform-style: preserve-3d !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.filepond--panel-top,
+.filepond--panel-bottom,
+.filepond--panel-center {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.filepond--panel-top,
+.filepond--panel-bottom {
+    height: 0.5em !important;
+}
+
+.filepond--panel-top {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom: none !important;
+}
+.filepond--panel-top::after {
+    content: '' !important;
+    position: absolute !important;
+    height: 2px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: -1px !important;
+    background-color: inherit !important;
+}
+
+.filepond--panel-center,
+.filepond--panel-bottom {
+    will-change: transform !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-transform-origin: left top !important;
+    transform-origin: left top !important;
+    -webkit-transform: translate3d(0, 0.5em, 0) !important;
+    transform: translate3d(0, 0.5em, 0) !important;
+}
+
+.filepond--panel-bottom {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-top: none !important;
+}
+.filepond--panel-bottom::before {
+    content: '' !important;
+    position: absolute !important;
+    height: 2px !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: -1px !important;
+    background-color: inherit !important;
+}
+
+.filepond--panel-center {
+    height: 100px !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;
+}
+.filepond--panel-center:not([style]) {
+    visibility: hidden !important;
+}
+
+.filepond--progress-indicator {
+    position: static !important;
+    width: 1.25em !important;
+    height: 1.25em !important;
+    color: #fff !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+    will-change: transform, opacity !important;
+}
+
+.filepond--progress-indicator svg {
+    width: 100% !important;
+    height: 100% !important;
+    vertical-align: top !important;
+    transform-box: fill-box !important;
+}
+
+.filepond--progress-indicator path {
+    fill: none !important;
+    stroke: currentColor !important;
+}
+
+.filepond--list-scroller {
+    z-index: 6 !important;
+}
+
+.filepond--drop-label {
+    z-index: 5 !important;
+}
+
+.filepond--drip {
+    z-index: 3 !important;
+}
+
+.filepond--root > .filepond--panel {
+    z-index: 2 !important;
+}
+
+.filepond--browser {
+    z-index: 1 !important;
+}
+
+.filepond--root {
+    /* layout*/
+    box-sizing: border-box !important;
+    position: relative !important;
+    margin-bottom: 1em !important;
+    /* base font size for whole component */
+    font-size: 1rem !important;
+    /* base line height */
+    line-height: normal !important;
+    /* up uses default system font family */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
+    /* will increase font weight a bit on Safari */
+    font-weight: 450 !important;
+    text-align: left !important;
+    text-rendering: optimizeLegibility !important;
+    direction: ltr !important;
+    contain: layout style size !important;
+}
+.filepond--root * {
+    box-sizing: inherit !important;
+    line-height: inherit !important;
+}
+.filepond--root *:not(text) {
+    font-size: inherit !important;
+}
+.filepond--root[data-disabled] {
+    pointer-events: none !important;
+}
+.filepond--root[data-disabled] .filepond--list-scroller {
+    pointer-events: all !important;
+}
+.filepond--root[data-disabled] .filepond--list {
+    pointer-events: none !important;
+}
+
+/**
+ * Root element children layout
+ */
+.filepond--root .filepond--drop-label {
+    min-height: 4.75em !important;
+}
+
+.filepond--root .filepond--list-scroller {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+.filepond--root .filepond--credits {
+    position: absolute !important;
+    right: 0 !important;
+    opacity: 0.175 !important;
+    line-height: 0.85 !important;
+    font-size: 11px !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    z-index: 3 !important;
+    bottom: -14px !important;
+}
+
+.filepond--root .filepond--credits[style] {
+    top: 0 !important;
+    bottom: auto !important;
+    margin-top: 14px !important;
+}
+
+.wpforms-field-container {
+    margin-bottom: 22px !important; 
+}
+
+
+
+/*!
+ * FilePondPluginImageEdit 1.6.3
+ * Licensed under MIT, https://opensource.org/licenses/MIT/
+ * Please visit https://pqina.nl/filepond/ for details.
+ */
+
+/* eslint-disable */
+.filepond--action-edit-item.filepond--action-edit-item {
+    width: 2em !important;
+    height: 2em !important;
+    padding: 0.1875em !important;
+}
+
+.filepond--action-edit-item.filepond--action-edit-item[data-align*='center'] {
+    margin-left: -0.1875em !important;
+}
+
+.filepond--action-edit-item.filepond--action-edit-item[data-align*='bottom'] {
+    margin-bottom: -0.1875em !important;
+}
+
+.filepond--action-edit-item-alt {
+    border: none !important;
+    line-height: inherit !important;
+    background: transparent !important;
+    font-family: inherit !important;
+    color: inherit !important;
+    outline: none !important;
+    padding: 0 !important;
+    margin: 0 0 0 0.25em !important;
+    pointer-events: all !important;
+    position: absolute !important;
+}
+
+.filepond--action-edit-item-alt svg {
+    width: 1.3125em !important;
+    height: 1.3125em !important;
+}
+
+.filepond--action-edit-item-alt span {
+    font-size: 0 !important;
+    opacity: 0 !important;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--action-edit-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/*!
+ * FilePondPluginImagePreview 4.6.6
+ * Licensed under MIT, https://opensource.org/licenses/MIT/
+ * Please visit https://pqina.nl/filepond/ for details.
+ */
+
+/* eslint-disable */
+.filepond--image-preview-markup {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+}
+.filepond--image-preview-wrapper {
+    z-index: 2 !important;
+}
+.filepond--image-preview-overlay {
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    min-height: 5rem !important;
+    max-height: 7rem !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+.filepond--image-preview-overlay svg {
+    width: 100% !important;
+    height: auto !important;
+    color: inherit !important;
+    max-height: inherit !important;
+}
+.filepond--image-preview-overlay-idle {
+    mix-blend-mode: multiply !important;
+    color: rgba(40, 40, 40, 0.85) !important;
+}
+.filepond--image-preview-overlay-success {
+    mix-blend-mode: normal !important;
+    color: rgba(54, 151, 99, 1) !important;
+}
+.filepond--image-preview-overlay-failure {
+    mix-blend-mode: normal !important;
+    color: rgba(196, 78, 71, 1) !important;
+}
+/* disable for Safari as mix-blend-mode causes the overflow:hidden of the parent container to not work */
+@supports (-webkit-marquee-repetition: infinite) and
+  ((-o-object-fit: fill) or (object-fit: fill)) {
+    .filepond--image-preview-overlay-idle {
+        mix-blend-mode: normal !important;
+    }
+}
+.filepond--image-preview-wrapper {
+    /* no interaction */
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+
+    /* have preview fill up all available space */
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+
+    /* radius is .05em less to prevent the panel background color from shining through */
+    border-radius: 0.45em !important;
+    overflow: hidden !important;
+
+    /* this seems to prevent Chrome from redrawing this layer constantly */
+    background: rgba(0, 0, 0, 0.01) !important;
+}
+.filepond--image-preview {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 1 !important;
+    display: flex !important; /* this aligns the graphic vertically if the panel is higher than the image */
+    align-items: center !important;
+    height: 100% !important;
+    width: 100% !important;
+    pointer-events: none !important;
+    background: #222 !important;
+
+    /* will be animated */
+    will-change: transform, opacity !important;
+}
+.filepond--image-clip {
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+
+    /* transparency indicator (currently only supports grid or basic color) */
+}
+.filepond--image-clip[data-transparency-indicator='grid'] img,
+.filepond--image-clip[data-transparency-indicator='grid'] canvas {
+    background-color: #fff !important;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='%23eee'%3E%3Cpath d='M0 0 H50 V50 H0'/%3E%3Cpath d='M50 50 H100 V100 H50'/%3E%3C/svg%3E") !important;
+    background-size: 1.25em 1.25em !important;
+}
+.filepond--image-bitmap,
+.filepond--image-vector {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    will-change: transform !important;
+}
+.filepond--root[data-style-panel-layout~='integrated']
+.filepond--image-preview-wrapper {
+    border-radius: 0 !important;
+}
+.filepond--root[data-style-panel-layout~='integrated']
+.filepond--image-preview {
+    height: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.filepond--root[data-style-panel-layout~='circle']
+.filepond--image-preview-wrapper {
+    border-radius: 99999rem !important;
+}
+.filepond--root[data-style-panel-layout~='circle']
+.filepond--image-preview-overlay {
+    top: auto !important;
+    bottom: 0 !important;
+    -webkit-transform: scaleY(-1) !important;
+    transform: scaleY(-1) !important;
+}
+.filepond--root[data-style-panel-layout~='circle']
+.filepond--file
+.filepond--file-action-button[data-align*='bottom']:not([data-align*='center']) {
+    margin-bottom: 0.325em !important;
+}
+.filepond--root[data-style-panel-layout~='circle']
+.filepond--file
+[data-align*='left'] {
+    left: calc(50% - 3em) !important;
+}
+.filepond--root[data-style-panel-layout~='circle']
+.filepond--file
+[data-align*='right'] {
+    right: calc(50% - 3em) !important;
+}
+.filepond--root[data-style-panel-layout~='circle']
+.filepond--progress-indicator[data-align*='bottom'][data-align*='left'],
+.filepond--root[data-style-panel-layout~='circle']
+.filepond--progress-indicator[data-align*='bottom'][data-align*='right'] {
+    margin-bottom: calc(0.325em + 0.1875em) !important;
+}
+.filepond--root[data-style-panel-layout~='circle']
+.filepond--progress-indicator[data-align*='bottom'][data-align*='center'] {
+    margin-top: 0 !important;
+    margin-bottom: 0.1875em !important;
+    margin-left: 0.1875em !important;
+}
